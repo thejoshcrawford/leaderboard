@@ -9,7 +9,8 @@ namespace Leaderboard.Models
         public int? ProfileId { get; set; }
         public int? DivisionId { get; set; }
         
-        public string Name { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
         public byte Gender { get; set; }
 
         public virtual Competition Competition { get; set; }
