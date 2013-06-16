@@ -21,18 +21,19 @@ namespace Leaderboard.Migrations
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data. E.g.
             //
-            context.Competitions.AddOrUpdate(
+            context.Competitions.AddOrUpdate( c => c.Name,
                 new Competition { Name = "Empire Classic Games 2013" },
                 new Competition { Name = "Northwest Regionals 2013" },
                 new Competition { Name = "CrossFit Games 2013" }
             );
             context.SaveChanges();
-            context.Athletes.AddOrUpdate(
-                    new Athlete { CompetitionId = context.Competitions.Single(c => c.Name.Equals("Empire Classic Games 2013")).CompetitionId,  Name = "Josh Crawford", Gender = 1},
-                    new Athlete { CompetitionId = context.Competitions.Single(c => c.Name.Equals("Empire Classic Games 2013")).CompetitionId,  Name = "Andrea Crawford", Gender = 2},
-                    new Athlete { CompetitionId = context.Competitions.Single(c => c.Name.Equals("Empire Classic Games 2013")).CompetitionId,  Name = "Shawn Pointexter", Gender = 1},
-                    new Athlete { CompetitionId = context.Competitions.Single(c => c.Name.Equals("CrossFit Games 2013")).CompetitionId, Name = "Dan Staton", Gender = 1 }
+            context.Athletes.AddOrUpdate( a => a.FirstName,
+                    new Athlete { CompetitionId = context.Competitions.Single(c => c.Name.Equals("Empire Classic Games 2013")).CompetitionId,  FirstName = "Josh", LastName = "Crawford", Gender = 1},
+                    new Athlete { CompetitionId = context.Competitions.Single(c => c.Name.Equals("Empire Classic Games 2013")).CompetitionId, FirstName = "Andrea", LastName = "Crawford", Gender = 2 },
+                    new Athlete { CompetitionId = context.Competitions.Single(c => c.Name.Equals("Empire Classic Games 2013")).CompetitionId, FirstName = "Shawn", LastName = "Pointexter", Gender = 1 },
+                    new Athlete { CompetitionId = context.Competitions.Single(c => c.Name.Equals("CrossFit Games 2013")).CompetitionId, FirstName = "Dan", LastName = "Staton", Gender = 1 }
                 );
+            context.SaveChanges();
         }
     }
 }

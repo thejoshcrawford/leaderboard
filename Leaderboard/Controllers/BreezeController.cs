@@ -2,6 +2,7 @@
 using System.Web.Http;
 using Breeze.WebApi;
 using Leaderboard.Models;
+using Newtonsoft.Json.Linq;
 
 namespace Leaderboard
 {
@@ -15,6 +16,12 @@ namespace Leaderboard
         public string Metadata()
         {
             return _contextProvider.Metadata();
+        }
+
+        [HttpPost]
+        public SaveResult SaveChanges(JObject saveBundle)
+        {
+            return _contextProvider.SaveChanges(saveBundle);
         }
 
 //        [HttpGet]
@@ -43,6 +50,5 @@ namespace Leaderboard
         {
             return _contextProvider.Context.Divisions;
         }
-
     }
 }

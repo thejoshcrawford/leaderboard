@@ -159,7 +159,6 @@
     <Content Include="App\views\shell.html" />
     <Content Include="App\viewmodels\shell.js" />
     <Content Include="App_Data\Leaderboard.sdf" />
-    <Content Include="App_Data\LeaderboardOld.sdf" />
     <Content Include="Content\durandal.css" />
     <Content Include="Content\font\fontawesome-webfont.svg" />
     <Content Include="Content\font\fontawesome-webfont.woff" />
@@ -273,6 +272,10 @@
     <Compile Include="Migrations\201306062351564_Initial.Designer.cs">
       <DependentUpon>201306062351564_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201306152058483_FirstNameLastName.cs" />
+    <Compile Include="Migrations\201306152058483_FirstNameLastName.Designer.cs">
+      <DependentUpon>201306152058483_FirstNameLastName.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Athlete.cs" />
     <Compile Include="Models\Competition.cs" />
@@ -297,6 +300,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201306062351564_Initial.resx">
       <DependentUpon>201306062351564_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201306152058483_FirstNameLastName.resx">
+      <DependentUpon>201306152058483_FirstNameLastName.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
