@@ -1,8 +1,9 @@
 ﻿define(['services/logger', 'durandal/system', 'config', 'services/model'],
     function (logger, system, config, model) {
 
-        var EntityQuery = breeze.EntityQuery,
-            manager = configureBreezeManager();
+        var EntityQuery = breeze.EntityQuery;
+        var manager = configureBreezeManager();
+        var entityNames = model.entityNames;
 
         var getCompetitions = function (competitionsObservable) {
 
@@ -64,6 +65,10 @@
             return Q.all([getAthletes(), getCompetitions()]);
         };
 
+        var createCompetition = function() {
+            return manager.createEntity(entityNames.competition);
+        };
+
         var hasChanges = ko.observable(false);
 
         manager.hasChangesChanged.subscribe(function(eventArgs) {
@@ -71,6 +76,7 @@
         });
 
         var datacontext = {
+            createCompetition: createCompetition,
             getCompetitions: getCompetitions,
             getAthletes: getAthletes,
             hasChanges: hasChanges,

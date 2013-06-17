@@ -1,10 +1,16 @@
 define(function () {
     
-    var model = {
-        configureMetadataStore: configureMetadataStore
+    var entityNames = {
+        competition: 'Competition'
     };
-    
+
+    var model = {
+        configureMetadataStore: configureMetadataStore,
+        entityNames: entityNames
+    };
     return model;
+    
+    
     
     function configureMetadataStore(metadataStore) {
         metadataStore.registerEntityTypeCtor('Athlete', null, athleteInitializer);
