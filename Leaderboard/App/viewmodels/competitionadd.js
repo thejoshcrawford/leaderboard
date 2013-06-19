@@ -23,7 +23,7 @@
         return datacontext.saveChanges().then(goToEditView).fin(complete);
         
         function goToEditView(result) {
-            router.replaceLocation('#/competitions'); // competition().id()
+            router.replaceLocation('#/competitiondetail/' + competition().id());
         }
         
         function complete() {

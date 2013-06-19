@@ -4,6 +4,21 @@
         var EntityQuery = breeze.EntityQuery;
         var manager = configureBreezeManager();
         var entityNames = model.entityNames;
+        
+        var getCompetitonById = function (competitionId, competitionObservable) {
+            // 1st - fetchEntityByKey will look in local cache 
+            // first (because 3rd parm is true) 
+            // if not there then it will go remote
+            return manager.fetchEntityByKey(
+                entityNames.competition, competitionId, true)
+                .then(fetchSucceeded)
+                .fail(queryFailed);
+
+            // 2nd - Refresh the entity from remote store (if needed)
+            function fetchSucceeded(data) {
+                return competitionObservable(data.entity);
+            }
+        };
 
         var getCompetitions = function (competitionsObservable) {
 
@@ -77,6 +92,7 @@
 
         var datacontext = {
             createCompetition: createCompetition,
+            getCompetitionById: getCompetitonById,
             getCompetitions: getCompetitions,
             getAthletes: getAthletes,
             hasChanges: hasChanges,

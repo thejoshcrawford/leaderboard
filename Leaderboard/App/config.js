@@ -21,13 +21,19 @@
         visible: false,
         caption: '<i class="icon-plus"></i> Add Competition',
         settings: {admin: true}
+    }, {
+        url: 'competitiondetail/:id',
+        moduleId: 'viewmodels/competitiondetail',
+        name: 'Edit Competition',
+        visible: false
     }];
 
     var startModule = 'competitions';
 
     return {
+        debugEnabled: ko.observable(true),
+        remoteServiceName: remoteServiceName,
         routes: routes,
-        startModule: startModule,
-        remoteServiceName: remoteServiceName
+        startModule: startModule
     };
 })

@@ -5,6 +5,9 @@
             data-bind="click: cancel, enable: canSave"><i class="icon-undo"></i> Cancel</button>
         <button class="btn btn-info"
                 data-bind="click: save, enable: canSave"><i class="icon-save"></i> Save</button>
+        <button class="btn btn-danger" data-bind="click: deleteCompetition, disable: hasChanges">
+                <i class="icon-trash"></i>Delete
+        </button>
         <i class="icon-asterisk" data-bind="visible: hasChanges"></i>
     </div>
     <div data-bind="with: competition">    
@@ -13,14 +16,14 @@
             <input id="name" data-bind="value: name" 
                 placeholder="Competition name"/>
         </div>
-        <div class="details-left">
-            <div>
-                <label>Description</label>
-                <!--<textarea data-bind="value: description" 
-                              placeholder="Enter description"></textarea>-->
-                <textarea data-bind="value: description" 
-                          placeholder="Enter description"></textarea>
-            </div>
-        </div>
+<!--        <div class="details-left">-->
+<!--            <div>-->
+<!--                <label>Description</label>-->
+<!--                <!--<textarea data-bind="value: description" -->
+<!--                              placeholder="Enter description"></textarea>-->
+<!--                <textarea data-bind="value: description" -->
+<!--                          placeholder="Enter description"></textarea>-->
+<!--            </div>-->
+<!--        </div>-->
     </div>
 </section>
