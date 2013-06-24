@@ -280,6 +280,14 @@
     <Compile Include="Migrations\201306152058483_FirstNameLastName.Designer.cs">
       <DependentUpon>201306152058483_FirstNameLastName.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201306200507513_AddedValidations.cs" />
+    <Compile Include="Migrations\201306200507513_AddedValidations.Designer.cs">
+      <DependentUpon>201306200507513_AddedValidations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201306200509544_AddedValidations2.cs" />
+    <Compile Include="Migrations\201306200509544_AddedValidations2.Designer.cs">
+      <DependentUpon>201306200509544_AddedValidations2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Athlete.cs" />
     <Compile Include="Models\Competition.cs" />
@@ -307,6 +315,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201306152058483_FirstNameLastName.resx">
       <DependentUpon>201306152058483_FirstNameLastName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201306200507513_AddedValidations.resx">
+      <DependentUpon>201306200507513_AddedValidations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201306200509544_AddedValidations2.resx">
+      <DependentUpon>201306200509544_AddedValidations2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
