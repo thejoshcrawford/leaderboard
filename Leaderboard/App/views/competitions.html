@@ -8,12 +8,13 @@
             <address>found</address>
         </div>
     </header>
-    <section data-bind="foreach: competitions" class="view-list">
-        <article class="article-container-full-width">
-            <div class="competition-brief" title="Go to details.">
-                <h1 id="name" data-bind="text: name"></h1>
-            </div>
-
-        </article>
-    </section>
+    <table class="table table-striped">
+        <tbody data-bind="foreach: competitions">
+        <tr class="competition-brief btn-link">
+            <td title="Go to details.">
+                <h3 id="name" data-bind="text: name"></h3>
+            </td>
+        </tr>
+            </tbody>
+    </table>
 </section>

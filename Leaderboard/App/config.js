@@ -7,13 +7,18 @@
     var routes = [{
         url: 'competitions',
         moduleId: 'viewmodels/competitions',
-        name: 'Competitions',
+        name: 'Competiton List',
+        visible: true
+    }, {
+        url: 'map',
+        moduleId: 'viewmodels/map',
+        name: 'Competition Map',
         visible: true
     }, {
         url: 'athletes',
         moduleId: 'viewmodels/athletes',
         name: 'Athletes',
-        visible: true
+        visible: false
     }, {
         url: 'competitionadd',
         moduleId: 'viewmodels/competitionadd',
