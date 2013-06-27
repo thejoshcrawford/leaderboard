@@ -132,6 +132,7 @@
     <Content Include="App\viewmodels\athletes.js" />
     <Content Include="App\viewmodels\competitionadd.js" />
     <Content Include="App\viewmodels\competitiondetail.js" />
+    <Content Include="App\viewmodels\map.js" />
     <Content Include="App\views\competitions.html" />
     <Content Include="App\viewmodels\competitions.js" />
     <Content Include="App\services\datacontext.js" />
@@ -159,6 +160,7 @@
     <Content Include="App\views\athletes.html" />
     <Content Include="App\views\competitionadd.html" />
     <Content Include="App\views\competitiondetail.html" />
+    <Content Include="App\views\map.html" />
     <Content Include="App\views\nav.html" />
     <Content Include="App\views\shell.html" />
     <Content Include="App\viewmodels\shell.js" />

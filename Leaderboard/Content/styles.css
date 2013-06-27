@@ -177,7 +177,7 @@ h6 {
     font-size: 11.9px;
 }
 
-.page-title {
+/*.page-title {
     font-family: "Segoe UI", Arial, Helvetica, sans-serif;
     color: #0081C2;
     display: inline-block;
@@ -185,7 +185,7 @@ h6 {
     text-transform: uppercase;
     -webkit-text-shadow: #1f1f1f 1px 1px;
     text-shadow: #1f1f1f 1px 1px;
-}
+}*/
 
 body {
     font-size: 18px;
@@ -206,7 +206,7 @@ body {
         background-size: 40px;
     }
 
-    body > header > h1,
+    /*body > header > h1,
     span.title,
     .jump-start-title {
         font-family: "Segoe UI", Arial, Helvetica, sans-serif;
@@ -228,7 +228,7 @@ body {
             font-family: monospace;
             color: #f58a00;
             padding-left: 20px;
-        }
+        }*/
 
 section.main {
     margin-top: 2%;
@@ -245,7 +245,7 @@ section.main {
         padding-right: 1em;
     }
 
-.navbar-secondary {
+/*.navbar-secondary {
     background-color: #0081C2;
     background-image: -moz-linear-gradient(top,#59C0F3,#0081C2);
     background-image: -webkit-gradient(linear,0 0,0 100%,from(#59C0F3),to(#0081C2));
@@ -262,7 +262,7 @@ section.main {
     -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
     -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
-}
+}*/
 
 .navbar {
     text-transform: uppercase;
@@ -273,6 +273,7 @@ section.main {
     letter-spacing: 1px;
 }
 
+/*
 .btn-info {
     background-color: #0081C2;
     background-image: -moz-linear-gradient(top,#0081C2,#194D7B);
@@ -300,6 +301,7 @@ section.main {
         background-color: #0081C2 \9;
         background-color: #194D7B \9;
     }
+*/
 
 .btn-force-refresh {
     float: right;
@@ -435,7 +437,7 @@ section.main {
     margin-top: 0%;
 }
 
-    .view-list > article:hover {
+   /* .view-list > article:hover {
         cursor: pointer;
         color: white;
         background-color: #0081C2;
@@ -447,7 +449,7 @@ section.main {
         background-repeat: repeat-x;
         border-color: #59C0F3 #0081C2 #194D7B;
         border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-    }
+    }*/
 
         .view-list > article:hover small {
             color: white;

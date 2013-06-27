@@ -18,7 +18,6 @@
 
         var hasChanges = ko.computed(function() {
             return datacontext.hasChanges();
-            return datacontext.hasChanges();
         });
 
         var cancel = function() {
