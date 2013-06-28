@@ -2,7 +2,7 @@
     <header>
         <button class="btn btn-info btn-force-refresh pull-right" 
             data-bind="click: refresh"><i class="icon-refresh"></i> Refresh</button>
-        <h3 class="page-title" data-bind="text: title"></h3>
+        <h3 data-bind="text: title"></h3>
         <div class="article-counter">
             <address data-bind="text: competitions().length"></address>
             <address>found</address>
@@ -10,9 +10,9 @@
     </header>
     <table class="table table-striped">
         <tbody data-bind="foreach: competitions">
-        <tr class="competition-brief btn-link">
-            <td title="Go to details.">
-                <h3 id="name" data-bind="text: name"></h3>
+        <tr>
+            <td>
+                <h3 class="competition-brief pull-left btn-link" title="Go to leaderboard." data-bind="text: name"></h3><button class="btn btn-info pull-right">Edit</button>
             </td>
         </tr>
             </tbody>
